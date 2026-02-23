@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MauiBug.VideoPage"
+             Title="Video Page">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- MediaElement playing a public sample video -->
+        <toolkit:MediaElement
+            x:Name="MediaPlayer"
+            Grid.Row="0"
+            Source="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            ShouldAutoPlay="True" />
+
+        <Button
+            Grid.Row="1"
+            Text="Go Back"
+            Clicked="OnGoBackClicked"
+            Margin="20"
+            HorizontalOptions="Center" />
+    </Grid>
+
+</ContentPage>
